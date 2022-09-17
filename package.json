@@ -3,10 +3,9 @@
     "d3": "^7.6.1"
   },
   "name": "d3-array1d",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "description": "d3 array1d graph",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "src/array1D.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

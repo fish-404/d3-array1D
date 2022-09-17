@@ -2,11 +2,11 @@ import * as d3 from "d3";
 
 class Array1D {
     constructor(config) {
-        this.config = conifg;
+        this.config = config;
     }
 
     drawArray1D() {
-        let container = d3.select(config.selector).insert("svg").attr("width", config.width);
+        let container = d3.select(this.config.selector).insert("svg").attr("width", this.config.width);
 
         container
             .selectAll("g")
@@ -16,7 +16,7 @@ class Array1D {
             .append("rect")
             .attr("width", this.config.boxLen)
             .attr("height", this.config.boxLen)
-            .attr("x", (d, i) => i * this.config.boxLen + this.config.padding)
+            .attr("x", (d, i) => i * this.config.boxLen + this.config.margin)
             .attr("y", this.config.padding)
             .attr("stroke", this.config.lineColor)
             .attr("stroke-width", this.config.lineWidth)
@@ -35,8 +35,8 @@ class Array1D {
             // value text
             .append("text")
             .text((d) => d)
-            .attr("x", (d, i) => i * this.config.boxLen + this.config.marin / 2 + this.config.boxLen / 2)
-            .attr("y", this.config.boxLen / 2 + this.margin)
+            .attr("x", (d, i) => i * this.config.boxLen + this.config.margin / 2 + this.config.boxLen / 2)
+            .attr("y", this.config.boxLen / 2 + this.config.margin)
     }
 }
 
