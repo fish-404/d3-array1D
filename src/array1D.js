@@ -6,9 +6,9 @@ class Array1D {
     }
 
     drawArray1D() {
-        let container = d3.select(this.config.selector).insert("svg").attr("width", this.config.width);
+        this.svg = d3.select(this.config.selector).insert("svg").attr("width", this.config.width);
 
-        container
+        this.svg 
             .selectAll("g")
             .data(this.config.data)
             .enter()
@@ -41,6 +41,12 @@ class Array1D {
             .attr("y", this.config.boxLen / 2)
             .attr("text-anchor", "middle")
             .attr("dominant-baseline", "middle")
+    }
+
+    colorArray1D(start, end, fillColor) {
+        this.svg
+            .selectAll(`g:nth-child(n+${start}):nth-child(-n+${end}) rect`)
+            .attr("fill", fillColor);
     }
 }
 
