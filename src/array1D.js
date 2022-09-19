@@ -27,16 +27,20 @@ class Array1D {
             // index text
             .append("text")
             .text((d, i) => i)
-            .attr("x", (d, i) => i * this.config.boxLen + this.config.margin / 2 + this.config.boxLen / 2)
+            .attr("x", (d, i) => i * this.config.boxLen + this.config.margin + this.config.boxLen / 2)
             .attr("y", this.config.boxLen + this.config.margin * 2)
+            .attr("text-anchor", "middle")
+            .attr("dominant-baseline", "hanging")
             .select(function() {
                 return this.parentNode;
             })
             // value text
             .append("text")
             .text((d) => d)
-            .attr("x", (d, i) => i * this.config.boxLen + this.config.margin / 2 + this.config.boxLen / 2)
-            .attr("y", this.config.boxLen / 2 + this.config.margin)
+            .attr("x", (d, i) => i * this.config.boxLen + this.config.margin + this.config.boxLen / 2)
+            .attr("y", this.config.boxLen / 2)
+            .attr("text-anchor", "middle")
+            .attr("dominant-baseline", "middle")
     }
 }
 
