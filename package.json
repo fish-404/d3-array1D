@@ -3,7 +3,7 @@
     "d3": "^7.6.1"
   },
   "name": "d3-array1d",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "d3 array1d graph",
   "main": "src/array1D.js",
   "scripts": {

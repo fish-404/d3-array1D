@@ -45,7 +45,7 @@ class Array1D {
 
     colorArray1D(start, end, fillColor) {
         this.svg
-            .selectAll(`g:nth-child(n+${start-1}):nth-child(-n+${end-1}) rect`)
+            .selectAll(`g:nth-child(n+${start+1}):nth-child(-n+${end+1}) rect`)
             .attr("fill", fillColor);
     }
 }
